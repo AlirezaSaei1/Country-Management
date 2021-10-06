@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightGreen;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.BankController">
+   <children>
+      <TextField fx:id="user" layoutX="226.0" layoutY="175.0" />
+      <TextField fx:id="pass" layoutX="226.0" layoutY="218.0" />
+      <Button layoutX="251.0" layoutY="280.0" mnemonicParsing="false" onAction="#create" prefHeight="25.0" prefWidth="98.0" text="Create Account" />
+      <Button layoutX="275.0" layoutY="324.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+      <Label layoutX="146.0" layoutY="179.0" text="Username : " />
+      <Label layoutX="149.0" layoutY="222.0" text="Password :" />
+      <TextField fx:id="name" layoutX="226.0" layoutY="131.0" />
+      <Label layoutX="167.0" layoutY="135.0" text="Name :" />
+      <Label layoutX="187.0" layoutY="26.0" text="Create New Account">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="signupLabel" alignment="CENTER" layoutY="357.0" prefHeight="17.0" prefWidth="601.0" textFill="#e41414" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: GoldenRod;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.VehicleController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c4c9cd" height="221.0" layoutX="34.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#88c5ff" height="221.0" layoutX="217.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bd904b" height="221.0" layoutX="399.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+      <Button layoutX="34.0" layoutY="348.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="533.0" text="Back" />
+      <Label layoutX="237.0" layoutY="31.0" text="Buy Vehicle">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="110.0" text="Air Vehicels">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="110.0" text="Water Vehicles">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="429.0" layoutY="110.0" text="Ground Vehicles">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="67.0" layoutY="152.0" mnemonicParsing="false" onAction="#buyPassengerPlane" prefHeight="76.0" prefWidth="102.0" text="Passenger Plane" />
+      <Button layoutX="67.0" layoutY="235.0" mnemonicParsing="false" onAction="#buyCargoPlane" prefHeight="76.0" prefWidth="102.0" text="Cargo Plane" />
+      <Button layoutX="250.0" layoutY="152.0" mnemonicParsing="false" onAction="#buyBoat" prefHeight="76.0" prefWidth="102.0" text="Boat" />
+      <Button layoutX="250.0" layoutY="235.0" mnemonicParsing="false" onAction="#buyShip" prefHeight="76.0" prefWidth="102.0" text="Ship" />
+      <Button layoutX="429.0" layoutY="152.0" mnemonicParsing="false" onAction="#buyBus" prefHeight="76.0" prefWidth="102.0" text="Bus" />
+      <Button layoutX="429.0" layoutY="235.0" mnemonicParsing="false" onAction="#buyTrain" prefHeight="76.0" prefWidth="102.0" text="Train" />
+   </children>
+</AnchorPane>

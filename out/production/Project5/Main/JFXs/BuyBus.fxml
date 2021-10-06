@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightBlue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.BuyBusController">
+   <children>
+      <Label layoutX="245.0" layoutY="22.0" text="Bus Order">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="6.0" layoutY="10.0" mnemonicParsing="false" onAction="#Return" text="Back" />
+      <TextField fx:id="bName" layoutX="204.0" layoutY="100.0" prefHeight="25.0" prefWidth="192.0" />
+      <TextField fx:id="bSpeed" layoutX="204.0" layoutY="150.0" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="bCap" layoutX="339.0" layoutY="150.0" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="bRows" layoutX="204.0" layoutY="200.0" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="bRate" layoutX="339.0" layoutY="200.0" prefHeight="25.0" prefWidth="57.0" />
+      <ChoiceBox fx:id="bColor" layoutX="204.0" layoutY="249.0" prefHeight="25.0" prefWidth="192.0" />
+      <Label layoutX="140.0" layoutY="104.0" text="Name :" />
+      <Label layoutX="300.0" layoutY="154.0" text="Cap. :" />
+      <Label layoutX="112.0" layoutY="154.0" text="Max Speed :" />
+      <Label layoutX="274.0" layoutY="204.0" text="Seat Rate :" />
+      <Label layoutX="115.0" layoutY="204.0" text="Seat Rows :" />
+      <Label layoutX="439.0" layoutY="204.0" text="(Each Row Has 2 Seats)" />
+      <Label layoutX="142.0" layoutY="253.0" text="Color :" />
+      <Button layoutX="247.0" layoutY="333.0" mnemonicParsing="false" onAction="#order" prefHeight="25.0" prefWidth="110.0" text="Order" />
+      <Label fx:id="myLabel" alignment="CENTER" layoutY="369.0" prefHeight="17.0" prefWidth="601.0" textFill="#b91717" />
+      <ChoiceBox fx:id="bTerminal" layoutX="204.0" layoutY="289.0" prefHeight="25.0" prefWidth="192.0" />
+      <Label layoutX="69.0" layoutY="293.0" text="Select Bus Terminal :" />
+      <Label layoutX="354.0" layoutY="225.0" text="(1-3)" />
+   </children>
+</AnchorPane>

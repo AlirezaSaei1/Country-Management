@@ -1,0 +1,60 @@
+package Main;
+
+import Main.Building.Terminal;
+import Main.Travel.Travels;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.ListView;
+import javafx.stage.Stage;
+
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+
+public class AllTravelsController implements Initializable {
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+    @FXML
+    ListView<String> TravelsList;
+
+    ArrayList<Travels> allOut = new ArrayList<>();
+    ArrayList<String> myTList = new ArrayList<>();
+    public void showTravels(ActionEvent e)throws Exception{
+        root = FXMLLoader.load(getClass().getResource("JFXs/Menu1Travels.fxml"));
+        stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("All Travels");
+        stage.show();
+    }
+    public void back(ActionEvent e) throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("JFXs/FirstMenu.fxml"));
+        root = loader.load();
+        Menu1Controller c1 = loader.getController();
+        c1.firstMenu(e);
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        for (City c : Country.country) {
+            for (Terminal t : c.airports) {
+                allOut.addAll(t.outTravel);
+            }
+        }
+        for (City c : Country.country) {
+            for (Terminal t : c.busTerminals) {
+                allOut.addAll(t.outTravel);
+            }
+        }
+        allOut.sort(Travels::compareTo);
+        for (Travels t : allOut) {
+            myTList.add(String.format("City: %5s \t Destination: %5s \t Date : %5s \t Cost: %f", t.getDepartureCity().cityName, t.getArrivalCity().cityName, t.getTravelDate(), t.getTripCost()));
+        }
+        TravelsList.getItems().addAll(myTList);
+    }
+}
