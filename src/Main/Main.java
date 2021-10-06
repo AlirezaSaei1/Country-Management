@@ -13,11 +13,10 @@ public class Main extends Application implements Serializable{
     public static Scanner scan = new Scanner(System.in);
     static boolean tookLoan = false;
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("JFXs/Main.fxml"));
             Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.setTitle("Welcome!");
             primaryStage.show();
